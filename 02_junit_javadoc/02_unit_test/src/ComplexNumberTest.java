@@ -55,7 +55,7 @@ public class ComplexNumberTest {
         ComplexNumber b = new ComplexNumber(-3, 5);
         ComplexNumber c = new ComplexNumber(2, 5);
         ComplexNumber d = new ComplexNumber(3, 7);
-        
+
 
 
         assertEquals(new ComplexNumber(14, 22), a.multiply(b));
@@ -74,6 +74,19 @@ public class ComplexNumberTest {
         // (8 + 16i) : 4        = (   2 +    4i)
 
         // TODO: Test schreiben
+        ComplexNumber a = new ComplexNumber(4, -8);
+        ComplexNumber b = new ComplexNumber(3, 4);
+        ComplexNumber c = new ComplexNumber(1, 0);
+        ComplexNumber d = new ComplexNumber(0, 1);
+        ComplexNumber e = new ComplexNumber(8, 16);
+
+
+
+        assertEquals(new ComplexNumber(14, 22), a.divide(b));
+        assertEquals(new ComplexNumber(-29, 29), c.divide(d));
+        assertEquals(new ComplexNumber(8, -16), e.divide(4));
+
+
     }
 
     /**
