@@ -78,7 +78,7 @@ public class ComplexNumber {
      * @return das Ergebnis der Subtraktion
      */
     public ComplexNumber subtract(ComplexNumber other) {
-        return add(other.multiply(1));
+        return add(other.multiply(-1));
     }
 
     /**

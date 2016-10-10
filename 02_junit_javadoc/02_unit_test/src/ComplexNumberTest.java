@@ -33,6 +33,12 @@ public class ComplexNumberTest {
         // (2 + 11i) - (4 + -5i) = (-2 +  16i)
 
         // TODO: Test schreiben
+        
+        ComplexNumber a = new ComplexNumber(4, -5);
+        ComplexNumber b = new ComplexNumber(2, 11);
+
+        assertEquals(new ComplexNumber(2, -16), a.subtract(b));
+        assertEquals(new ComplexNumber(-2, 16), b.subtract(a));
     }
 
     /**
