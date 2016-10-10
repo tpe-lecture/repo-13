@@ -12,17 +12,17 @@ public class ComplexNumberTest {
     @Test
     public void testAddition() {
         // Beispiel für einen Test der Addition
-        
+
         // Durchzuführende Tests:
         // (4 + -5i) + (2 + 11i) = (6 + 6i)
-        // (4 + -5i) + 3         = (7 + -5i)        
+        // (4 + -5i) + 3         = (7 + -5i)
         ComplexNumber a = new ComplexNumber(4, -5);
         ComplexNumber b = new ComplexNumber(2, 11);
 
         assertEquals(new ComplexNumber(6, 6), a.add(b));
         assertEquals(new ComplexNumber(7, -5), a.add(3));
     }
-    
+
     /**
      * Testet die Subtraktion.
      */
@@ -32,8 +32,7 @@ public class ComplexNumberTest {
         // (4 + -5i) - (2 + 11i) = ( 2 + -16i)
         // (2 + 11i) - (4 + -5i) = (-2 +  16i)
 
-        // TODO: Test schreiben
-        
+
         ComplexNumber a = new ComplexNumber(4, -5);
         ComplexNumber b = new ComplexNumber(2, 11);
 
@@ -50,8 +49,18 @@ public class ComplexNumberTest {
         // (2 + -4i) * (-3 + 5i) = (14  +  22i)
         // (2 +  5i) * ( 3 + 7i) = (-29 +  29i)
         // (2 + -4i) * 4         = (  8 + -16i)
-        
+
         // TODO: Test schreiben
+        ComplexNumber a = new ComplexNumber(2, -4);
+        ComplexNumber b = new ComplexNumber(-3, 5);
+        ComplexNumber c = new ComplexNumber(2, 5);
+        ComplexNumber d = new ComplexNumber(3, 7);
+        
+
+
+        assertEquals(new ComplexNumber(14, 22), a.multiply(b));
+        assertEquals(new ComplexNumber(-29, 29), c.multiply(d));
+        assertEquals(new ComplexNumber(8, -16), a.multiply(4));
     }
 
     /**
@@ -63,7 +72,7 @@ public class ComplexNumberTest {
         // (4 + -8i) : (3 + 4i) = (-0,8 + -1,6i)
         // (1 +  0i) : (0 + 1i) = (   0 +   -1i)
         // (8 + 16i) : 4        = (   2 +    4i)
-        
+
         // TODO: Test schreiben
     }
 
@@ -75,7 +84,7 @@ public class ComplexNumberTest {
         // Durchzuführende Tests:
         // (3   +  5i) --conj--> (3   + -5i)
         // (-2  + -4i) --conj--> (-2  + 4i)
-          
+
         // TODO: Test schreiben
     }
 
@@ -89,8 +98,8 @@ public class ComplexNumberTest {
         // |(0 +  3i)| = 3
 
         // TODO: Test schreiben
-    }   
-    
+    }
+
     /**
      * Testet das Potenzieren.
      */
