@@ -1,3 +1,4 @@
+
 import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 
@@ -82,9 +83,9 @@ public class ComplexNumberTest {
 
 
 
-        assertEquals(new ComplexNumber(14, 22), a.divide(b));
-        assertEquals(new ComplexNumber(-29, 29), c.divide(d));
-        assertEquals(new ComplexNumber(8, -16), e.divide(4));
+        assertEquals(new ComplexNumber(-0.8,-1.6), a.divide(b));
+        assertEquals(new ComplexNumber(0, -1), c.divide(d));
+        assertEquals(new ComplexNumber(2, 4), e.divide(4));
 
 
     }
@@ -99,6 +100,12 @@ public class ComplexNumberTest {
         // (-2  + -4i) --conj--> (-2  + 4i)
 
         // TODO: Test schreiben
+    	ComplexNumber a = new ComplexNumber(3, 5);
+        ComplexNumber b = new ComplexNumber(-2, -4);
+        assertEquals(new ComplexNumber(3,-5),a.conjugate());
+        assertEquals(new ComplexNumber(-2,4),b.conjugate());
+    	
+    	
     }
 
     /**
@@ -111,6 +118,11 @@ public class ComplexNumberTest {
         // |(0 +  3i)| = 3
 
         // TODO: Test schreiben
+    	ComplexNumber a = new ComplexNumber(3, -4);
+        ComplexNumber b = new ComplexNumber(0, 3);
+        assertEquals(5, a.abs(),0);
+        assertEquals(3, b.abs(),0);
+    	
     }
 
     /**
@@ -125,6 +137,17 @@ public class ComplexNumberTest {
         // (2 + -4i)^6 = (7488 + -2816i)
 
         // TODO: Test schreiben
+    	ComplexNumber a = new ComplexNumber(2, -4);
+    	ComplexNumber b = a.multiply(a);
+    	ComplexNumber c = b.multiply(a);
+    	assertEquals(a, a.power(1));
+    	assertEquals(b, a.power(2));
+    	assertEquals(c, a.power(3));
+    	assertEquals(new ComplexNumber(7488, -2816), a.power(6));
+    	
+    	
+        
+        
+    	
     }
 }
-
