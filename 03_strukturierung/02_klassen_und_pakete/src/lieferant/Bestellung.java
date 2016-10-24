@@ -1,3 +1,6 @@
+package lieferant;
+import kunde.Kunde;
+
 /**
  * Eine Bestellung.
  */

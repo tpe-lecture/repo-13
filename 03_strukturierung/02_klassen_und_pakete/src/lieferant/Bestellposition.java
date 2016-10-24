@@ -1,3 +1,4 @@
+package lieferant;
 /**
  * Eine Position der Bestellung.
  */

@@ -1,4 +1,4 @@
-
+package kunde;
 
 /**
  * Ein Kunde der Firma.

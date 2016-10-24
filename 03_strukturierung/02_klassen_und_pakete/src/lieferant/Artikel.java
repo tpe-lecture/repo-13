@@ -1,4 +1,4 @@
-
+package lieferant;
 
 /**
  * Ein Artikel aus dem Angebot der Firma.

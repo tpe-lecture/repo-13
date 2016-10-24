@@ -1,4 +1,4 @@
-
+package buchhaltung;
 
 /**
  * Ein Konto in der Buchhaltung der Firma.
