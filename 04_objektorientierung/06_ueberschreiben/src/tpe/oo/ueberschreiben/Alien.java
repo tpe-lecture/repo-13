@@ -29,6 +29,9 @@ public class Alien extends AnimatedSprite {
         velocity.setVelocity(Direction.WEST, ALIEN_SPEED);
     }
 
+    public void mousePressed(){
+        this.explode();
+    }
     /**
      * Alien explodieren lassen.
      */

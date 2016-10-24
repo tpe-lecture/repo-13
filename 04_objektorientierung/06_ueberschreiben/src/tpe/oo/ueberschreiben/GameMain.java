@@ -25,5 +25,6 @@ public class GameMain extends MainWindow {
         // Spiel starten
         EventQueue.invokeLater(GameMain::new);
     }
+
 }
 
