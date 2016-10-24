@@ -1,6 +1,4 @@
-package javaTest;
 
-import javaTest.ComplexNumber;
 
 /**
  * Klasse, die eine komplexe Zahl repräsentiert. Sie unterstützt
