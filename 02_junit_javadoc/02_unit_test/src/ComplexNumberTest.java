@@ -8,7 +8,7 @@ import static org.junit.Assert.assertEquals;
 public class ComplexNumberTest {
 
     /**
-     * Testet die Addtion.
+     * Testet die Addtion.xxxxx
      */
     @Test
     public void testAddition() {
@@ -104,8 +104,8 @@ public class ComplexNumberTest {
         ComplexNumber b = new ComplexNumber(-2, -4);
         assertEquals(new ComplexNumber(3,-5),a.conjugate());
         assertEquals(new ComplexNumber(-2,4),b.conjugate());
-    	
-    	
+
+
     }
 
     /**
@@ -122,7 +122,7 @@ public class ComplexNumberTest {
         ComplexNumber b = new ComplexNumber(0, 3);
         assertEquals(5, a.abs(),0);
         assertEquals(3, b.abs(),0);
-    	
+
     }
 
     /**
@@ -144,10 +144,10 @@ public class ComplexNumberTest {
     	assertEquals(b, a.power(2));
     	assertEquals(c, a.power(3));
     	assertEquals(new ComplexNumber(7488, -2816), a.power(6));
-    	
-    	
-        
-        
-    	
+
+
+
+
+
     }
 }
