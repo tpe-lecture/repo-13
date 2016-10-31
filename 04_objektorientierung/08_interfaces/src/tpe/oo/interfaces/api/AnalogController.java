@@ -2,30 +2,26 @@ package tpe.oo.interfaces.api;
 
 import java.awt.Point;
 
-/**
- * Ein digitaler Joystick.
- */
-public interface DigitalController {
-
+public interface AnalogController {
     /**
      * Nach oben bewegen.
      */
-    void up();
+    void up(double procentage);
 
     /**
      * Nach unten bewegen.
      */
-    void down();
+    void down(double procentage);
 
     /**
      * Nach links bewegen.
      */
-    void left();
+    void left(double procentage);
 
     /**
      * Nach rechts bewegen.
      */
-    void right();
+    void right(double procentage);
 
     /**
      * Liefert die aktuelle Position zurück.

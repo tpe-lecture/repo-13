@@ -7,7 +7,7 @@ import tpe.oo.interfaces.api.DigitalController;
 /**
  * Implementierung eines digitalen Joysticks.
  */
-public class DigitalControllerImpl implements DigitalController {
+public class DigitalControllerImpl implements DigitalController{
 
     private Point position = new Point(0, 0);
 
