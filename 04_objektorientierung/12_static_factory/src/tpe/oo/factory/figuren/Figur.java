@@ -23,12 +23,12 @@ public abstract class Figur extends AnimatedSprite {
      * @param asset Bild für die Figur
      */
     public Figur(Board board, AnimatedImage asset) {
-        super(board, new Point(new Random().nextInt(board.getWidth() * 2), 
-                new Random().nextInt(300)), 
+        super(board, new Point(new Random().nextInt(board.getWidth() * 2),
+                new Random().nextInt(300)),
                 BoundaryPolicy.JUMP_BACK,
                 asset);
         velocity.setVelocity(Direction.WEST, SPEED);
-        setBounds(new Rectangle(0, 0, 
+        setBounds(new Rectangle(0, 0,
                 board.getWidth() + 400, board.getHeight()));
     }
 }

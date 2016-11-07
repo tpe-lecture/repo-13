@@ -7,7 +7,7 @@ import de.smits_net.games.framework.image.AnimatedImage;
  * Lady.
  */
 public class Lady extends Figur {
-    
+
     /**
      * Neuer Figur anlegen.
      *
