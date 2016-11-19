@@ -29,18 +29,18 @@ Bei den Menschen gibt es zwei wichtige Gruppen: die normalen _Bürger_ und die _
 
 Die Mutanten sind unsterblich und haben daher auch kein Alter, denn Unsterbliche interessiert diese Information nicht. Dafür hat jeder Mutant eine charakteristische Mutation, die ihn auszeichnet. Die Mutationen werden einfach durch deren Namen (`String`) bezeichnet.
 
-Es gibt zwei Arten von Mutanten: _Superhelden_ und _Schurken_. Die Superhelden haben eine oder mehrere Superkräfte (`Superkraft`) und können mit Schurken kämpfen (`kaempfe`), wobei der Ausgang des Kampfes von der Superkraft abhängt. Ein Superheld kann einen Kampf entweder gewinnen oder verlieren. 
+Es gibt zwei Arten von Mutanten: _Superhelden_ und _Schurken_. Die Superhelden haben eine oder mehrere Superkräfte (`Superkraft`) und können mit Schurken kämpfen (`kaempfe`), wobei der Ausgang des Kampfes von der Superkraft abhängt. Ein Superheld kann einen Kampf entweder gewinnen oder verlieren.
 
 Jeder Schurke hat eine Schwäche, d.h. eine Superkraft (`Superkraft`), die ihn besiegen kann. Trifft er auf einen Superhelden, der diese Kraft besitzt, verliert er den Kampf. Besitzt der Superheld die Kraft nicht, gewinnt der Schurke. Schurken können ebenfalls einen Kampf mit einem Superhelden initiieren (`kaempfe`) und den Kampf nach denselben Regeln genauso entweder verlieren oder gewinnen.
 
-Schurken können sich in Schurkensyndikaten (`Syndikat`) zusammenschließen. Ein Syndikat hat einen Namen (z.B. "The Fantastic 5") und eine beliebige Anzahl von Schurken, die sich in dem Syndikat organisieren. Ein Schurke kann durchaus in mehreren Syndikaten organisiert sein, was aber wegen des Steuersystems (siehe unten) nicht von vielen Schurken wahrgenommen wird. 
+Schurken können sich in Schurkensyndikaten (`Syndikat`) zusammenschließen. Ein Syndikat hat einen Namen (z.B. "The Fantastic 5") und eine beliebige Anzahl von Schurken, die sich in dem Syndikat organisieren. Ein Schurke kann durchaus in mehreren Syndikaten organisiert sein, was aber wegen des Steuersystems (siehe unten) nicht von vielen Schurken wahrgenommen wird.
 
 
 #### Unternehmen
 
 Weiterhin gibt es in Metropolis noch Unternehmen. Diese sind entweder als _Personengesellschaften_ oder _Kapitalgesellschaften_ organisiert. Die Personengesellschaften haben eine beliebige Anzahl von Bürgern als Inhaber, die Kapitalgesellschaften eine beliebige Anzahl Bürger als Gesellschafter. Jedes Unternehmen hat einen Namen und einen Gewinn (in Metro-Dollar).
 
-Mutanten und Richter sind von der Teilhabe an Unternehmen ausgeschlossen. 
+Mutanten und Richter sind von der Teilhabe an Unternehmen ausgeschlossen.
 
 
 #### Steuern
@@ -54,23 +54,23 @@ Es gibt drei verschiedene Steuern in Metropolis:
     * die nächsten 60.000 Metro-Dollar werden mit 25% besteuert
     * jeder weitere Metro-Dollar wird mit 40% besteuert
   * __Gewerbesteuer__: Eine lineare Steuer von 15% auf den Gewinn aller Unternehmen, unabhängig von der Rechtsform. Natürliche Personen, d.h. Schurken und Bürger müssen diese Steuer _nicht_ abführen. Personengesellschaften haben noch eine Steuerermäßigung von 800 Metro-Dollar auf den Betrag der Steuer (nicht die Bemessungsgrundlage). Die Steuer kann hierbei niemals negativ werden.
- 
+
  Die folgende Tabelle zeigt einige Beispiele für die Berechnung der _Einkommensteuer_.
 
 Einkommen | Steuer
 ---------:|-------:
-10000     | 800   
-20000     | 1600  
-30000     | 3100  
-40000     | 4600  
-50000     | 6100  
-60000     | 7600  
-80000     | 12600 
-100000    | 17600 
-120000    | 22600 
-140000    | 30600 
-150000    | 34600 
-200000    | 54600 
+10000     | 800
+20000     | 1600
+30000     | 3100
+40000     | 4600
+50000     | 6100
+60000     | 7600
+80000     | 12600
+100000    | 17600
+120000    | 22600
+140000    | 30600
+150000    | 34600
+200000    | 54600
 
 
 Die einzelnen Steuern können nicht gegeneinander verrechnet werden, sondern werden einfach aufsummiert.
