@@ -19,25 +19,9 @@ import de.smits_net.games.framework.sprite.Velocity;
  */
 public class GameBoard extends Board {
 
-    /** Münzstapel. */
+    /* Münzen. */
     // TODO: Münzen als Stack speichern
-
-    private String[] stack;
-    private int pointer;
-
-    public void SimpleStackString(int size) {
-        stack = new String[size];
-        pointer = 0;
-        }
-
-    public void push(String asset) {
-
-        stack[pointer++] = asset;
-
-    }
-    public String pop() {
-        return stack[--pointer];
-        }
+    private Stack<Sprite> coins;
 
     /** A moving coin. */
     private Sprite moving;
@@ -57,11 +41,11 @@ public class GameBoard extends Board {
     public GameBoard() {
         // neues Spielfeld anlegen
         super(10, new Dimension(400, 400), Color.BLACK);
-
+        coins = new Stack<Sprite>();
         // Münzen anlegen
         for (int i = 0; i < 20; i++) {
             // TODO: Neue Münzen auf den Stapel legen
-            pointer++;
+            coins.push(createCoin());
         }
     }
 
@@ -112,8 +96,9 @@ public class GameBoard extends Board {
     @Override
     public synchronized void drawGame(Graphics g) {
         // TODO: Über alle Objekte im Stapel laufen und sie zeichnen
-
-
+        for (Sprite s : coins) {
+            s.draw(g);
+        }
         if (moving != null) {
             moving.draw(g, this);
         }
@@ -145,17 +130,15 @@ public class GameBoard extends Board {
         }
 
         // TODO: Wenn Stapel leer ist, nichts tun
-        if(stack==null){
-            return ;
+        if (coins.empty()) {
+            return;
         }
-
-        // TODO: Oberstes Sprite vom Stapel ansehen und s zuweisen
-        Sprite s = null;
+        Sprite s = coins.peek();
 
         if (s.intersects(new Point(e.getX(), e.getY()))) {
             points++;
 
-            // TODO: Oberstes Sprite vom Stapel entfernen und s zuweisen
+            s = coins.pop();
 
             moving = s;
             moving.setVelocity(new Velocity(0, 20));
@@ -173,6 +156,8 @@ public class GameBoard extends Board {
         }
 
         // TODO: Solange Stapel noch Elemente enthält, true zurückgeben.
-        return true;
+
+        return !coins.empty() ? true : false;
+
     }
 }
