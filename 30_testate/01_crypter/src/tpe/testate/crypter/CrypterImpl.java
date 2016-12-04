@@ -1,20 +1,28 @@
 package tpe.testate.crypter;
-
+/**
+ * Class für encrypt und decrypt (String)
+ * */
 public class CrypterImpl implements Crypter {
 
 	private final String stringAllowsChars = "abcdefghijklmnopqrstuvwxyz0123456789 ";
 
 	@Override
+	/**
+	 * Methode, die encrypt String
+	 * */
 	public String encrypt(String input) {
 		input = input.toLowerCase();
 		return replace(input);
 	}
 
 	@Override
+	/**
+	 * Methode, die encrypt String
+	 * */
 	public String decrypt(String input) throws IllegalArgumentException {
 		for(int i = 0; i < input.length(); i++) {
 			if(!isValidChar(input.charAt(i))) {
-				// TODO: text durch konstante ersetzen
+				//text durch konstante ersetzen
 				throw new IllegalArgumentException("String contains invalid character.");
 			}
 		}
@@ -23,7 +31,9 @@ public class CrypterImpl implements Crypter {
 
 		return replace(input);
 	}
-
+	/**
+	 * Methode, die ersetzt die Buchstaben
+	 * */
 	private String replace(String input) {
 		String result = "";
 		for (int i = 0; i < input.length(); i++) {
@@ -69,10 +79,11 @@ public class CrypterImpl implements Crypter {
 		}
 		return result;
 	}
-
+	/**
+	 * überspringt invalide buchstaben
+	 * */
 	private boolean isValidChar(Character ch) {
 		if(!stringAllowsChars.contains(ch.toString())) {
-			// überspringt invalide buchstaben
 			return false;
 		}
 		return true;
