@@ -9,7 +9,7 @@ public class CrypterImpl implements Crypter {
 	 * */
 	private final String stringAllowsChars = "abcdefghijklmnopqrstuvwxyz0123456789 ";
 
-	@Override
+
 	/**
      * Verschlüsselt den gegebenen Text. Enthält die Eingabe Großbuchstaben,
      * so werden diese in Kleinbuchstaben umgewandelt. Ungültige Zeichen
@@ -18,12 +18,13 @@ public class CrypterImpl implements Crypter {
      * @param input Text, der verschlüsselt werden soll.
      * @return Verschlüsselter Text.
      */
+	@Override
 	public String encrypt(String input) {
 		input = input.toLowerCase();
 		return replace(input);
 	}
 
-	@Override
+
 	 /**
      * Entschlüsselt den gegebenen Text. Enthält die Eingabe Großbuchstaben,
      * oder andere ungültige Zeichen, so wirft die Methode eine Ausnahme.
@@ -33,6 +34,7 @@ public class CrypterImpl implements Crypter {
      * @throws IllegalArgumentException Wird geworfen, wenn die Eingabe
      *      ungültige Zeichen (Großbuchstaben) enthält.
      */
+	@Override
 	public String decrypt(String input) throws IllegalArgumentException {
 		for(int i = 0; i < input.length(); i++) {
 			if(!isValidChar(input.charAt(i))) {
