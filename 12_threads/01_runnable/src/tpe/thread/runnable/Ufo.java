@@ -9,7 +9,7 @@ import de.smits_net.games.framework.image.SimpleImage;
 /**
  * Ein Ufo.
  */
-public class Ufo extends SimpleImage {
+public class Ufo extends SimpleImage implements Runnable{
 // TODO: Runnable implementieren
 
     /** X-Position des Ufos. */
@@ -48,6 +48,20 @@ public class Ufo extends SimpleImage {
      */
     public void draw(Graphics g) {
         super.draw(g, new Point(x, y), null);
+    }
+
+    @Override
+    public void run() {
+        while(x<board.getWidth()){
+            x++;
+            try {
+                Thread.sleep(sleepTime);
+            } catch (InterruptedException e) {
+                
+                System.out.println("Hilfee");
+                return;
+            }
+        }
     }
 
     // TODO: run-Methode schreiben in der Methode:
