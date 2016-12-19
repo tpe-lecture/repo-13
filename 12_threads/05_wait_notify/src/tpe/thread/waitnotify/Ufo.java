@@ -33,8 +33,8 @@ public class Ufo extends AnimatedImage implements Runnable {
      * @param x die X-Position für den Start.
      * @param y die Y-Position für den Start.
      * @param stopPosition Position, an der das Ufo anhalten soll.
-     * @param sleepTime Zeit, die das Ufo schlafen soll,
-     *          before es sich weiterbewegt.
+     * @param sleepTime Zeit, die das Ufo schlafen soll, before es sich
+     *            weiterbewegt.
      */
     public Ufo(Board board, int x, int y, int stopPosition, int sleepTime) {
         super(50, false, "assets", "spaceship");
@@ -60,14 +60,26 @@ public class Ufo extends AnimatedImage implements Runnable {
     public void run() {
         while (x < board.getWidth()) {
 
+            if (x == stopPosition) {
+                synchronized (board) {
+                    board.notifyAll();
+                    try {
+                        board.wait();
+
+                    } catch (InterruptedException e) {
+                        break;
+                    }
+
+                }
+
+            }
             // Ufo weiter bewegen
             x++;
-
             // Schlafen, bis die nächste Bewegung erfolgen soll
+
             try {
                 Thread.sleep(sleepTime);
-            }
-            catch (InterruptedException e) {
+            } catch (InterruptedException e) {
                 break;
             }
         }

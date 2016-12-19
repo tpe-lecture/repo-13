@@ -18,6 +18,9 @@ public class GameBoard extends Board {
         new Ufo(this, 0, 130, 240, 15),
         new Ufo(this, 100, 130, 320, 10),
         new Ufo(this, 200, 130, 400, 5),
+        new Ufo(this, 400, 130, 240, 15),
+        new Ufo(this, 800, 130, 320, 10),
+        new Ufo(this, 350, 130, 400, 5),
     };
 
     /** Hintergrund-Bild. */
