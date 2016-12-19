@@ -31,9 +31,11 @@ public class NumberIncrementer implements Runnable {
      */
     public void run() {
         for (int i = 0; i < boundary; i++) {
-            int lastNum = numberList.getLastNumber();
-            lastNum++;
-            numberList.add(lastNum);
+            synchronized (numberList) {
+                int lastNum = numberList.getLastNumber();
+                lastNum++;
+                numberList.add(lastNum);
+            }
         }
     }
 }

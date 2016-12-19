@@ -19,7 +19,7 @@ public class NumberList {
      *
      * @return letzte Zahl.
      */
-    public int getLastNumber() {
+    public synchronized int getLastNumber() {
         return lastNumber;
     }
 
@@ -28,7 +28,7 @@ public class NumberList {
      *
      * @param number die zu speichernde Zahl.
      */
-    public void add(int number) {
+    public synchronized void add(int number) {
         lastNumber = number;
         numbers.add(number);
     }
